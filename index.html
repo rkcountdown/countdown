@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Robi visszaszámlálója</title>
+<title>Rob's countdown</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style>
 body{
@@ -13,6 +13,12 @@ body{
 .c_both{
 	clear:both;
 }
+.title{
+	color:#FFF;
+	font-size:120px;
+	padding-top:8px;
+	font-weight:bold;
+}
 .next_event{
 	color:#FFF;
 	font-size:42px;
@@ -20,7 +26,7 @@ body{
 }
 .event{
 	color:#FFF;
-	font-size:36px;
+	font-size:80px;
 	padding:15px 0px 0px 12px;
 }
 .day{
@@ -29,7 +35,7 @@ body{
 </style>
 </head>
 <body>
-<div><img src="images/title.png" alt="" /></div>
+<div class="title">Rob's countdown</div>
 
 
 <div id="itemsContainer"></div>
@@ -46,7 +52,13 @@ count = ['1','2','3'];
 container = document.getElementById('itemsContainer');
   for(i = 0; i < events.length; i++){
 	if (currentdate<new Date(dates[i])){
-		container.innerHTML+='<div class="c_both event">' + events[i] + ' <span class="day">' + Math.round((new Date(dates[i]) - currentdate)/(1000 * 60 * 60 * 24)) + '</span> nap</div>';
+		countdown = Math.round((new Date(dates[i]) - currentdate)/(1000 * 60 * 60 * 24))
+		if(countdown==1){
+			day = "day"
+		} else{
+			day = "days"
+		}
+		container.innerHTML+='<div class="c_both event">' + events[i] + ' <span class="day">' + countdown + '</span> ' + day + '</div>';
 		}
   }
 
