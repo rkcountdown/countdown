@@ -1,0 +1,46 @@
+{
+  "nextColId": 6,
+  "nextTaskId": 4,
+  "columns": [
+    {
+      "id": 1,
+      "title": "Emails",
+      "tasks": []
+    },
+    {
+      "id": 2,
+      "title": "UI",
+      "tasks": [
+        {
+          "id": 2,
+          "text": "Test 2",
+          "priority": "medium",
+          "done": false
+        },
+        {
+          "id": 1,
+          "text": "test 1",
+          "priority": "medium",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Test 2",
+      "tasks": [
+        {
+          "id": 3,
+          "text": "A",
+          "priority": "medium",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Support",
+      "tasks": []
+    }
+  ]
+}
